@@ -50,5 +50,5 @@ jobs:
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            # github_domain: ${{ github.domain }}
-           artifact_name: gh-pages
+           artifact_name: github-pages
            folder: build
