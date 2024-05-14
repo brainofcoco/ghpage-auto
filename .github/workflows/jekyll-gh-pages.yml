@@ -46,9 +46,9 @@ jobs:
           path: build
 
       -  name: Deploy to Github Pages
-        uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # github_domain: ${{ github.domain }}
-          # branch: gh-pages
-          folder: build
+         uses: actions/deploy-pages@v4
+         with:
+           token: ${{ secrets.GITHUB_TOKEN }}
+           # github_domain: ${{ github.domain }}
+           # branch: gh-pages
+           folder: build
