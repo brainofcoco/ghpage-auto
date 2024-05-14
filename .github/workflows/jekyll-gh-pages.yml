@@ -45,5 +45,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           github_domain: ${{ github.domain }}
           branch: gh-pages
-          folder: build/coke
+          folder: build
       
