@@ -40,6 +40,12 @@ jobs:
         run: npm run build
 
       - name: Deploy to GiHub pages
+        
+        uses: actions/upload-artifacts@v4
+        with:
+          name: github-pages
+          path: build
+          
         uses: actions/deploy-pages@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
