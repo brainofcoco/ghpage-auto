@@ -39,6 +39,15 @@ jobs:
       - name: Build the React app
         run: npm run build
 
+      - name: Fix hard link
+        run: |
+          find . -type l -delete
+
+      - name: Optimize build size
+        run: |
+          npm run build
+          npx uglifyjs build/static/js/*.js -o build/static/js
+
       - name: Upload build artifacts to GitHub pages
         uses: actions/upload-artifact@v4
         with:
