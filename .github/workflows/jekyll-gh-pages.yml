@@ -39,16 +39,16 @@ jobs:
       - name: Build the React app
         run: npm run build
 
-      # - name: Upload build artifacts to GitHub pages
-      #   uses: actions/upload-artifacts@v4
-      #   with:
-      #     name: ghpage-auto
-      #     path: build
+      - name: Upload build artifacts to GitHub pages
+        uses: actions/upload-artifacts@v4
+        with:
+          name: github-pages
+          path: build
 
       -  name: Deploy to Github Pages
          uses: actions/deploy-pages@v4
          with:
            token: ${{ secrets.GITHUB_TOKEN }}
            # github_domain: ${{ github.domain }}
-           # branch: gh-pages
+           artifact_name: gh-pages
            folder: build
